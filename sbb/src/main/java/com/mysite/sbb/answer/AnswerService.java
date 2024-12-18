@@ -25,6 +25,7 @@ public class AnswerService {
         this.answerRepository.save(answer);
 	}
 	public Answer getAnswer(Integer id) {
+		System.out.println("Searching for answer with id: " + id);
 		Optional<Answer> answer = this.answerRepository.findById(id);
 		if(answer.isPresent()) {
 			return answer.get();
